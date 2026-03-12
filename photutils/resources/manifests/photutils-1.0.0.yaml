@@ -12,3 +12,15 @@ tags:
   schema_uri: asdf://astropy.org/photutils/schemas/psf/airy_disk_psf-1.0.0
   title: AiryDiskPSF
   description: ASDF schema for serializing a photutils AiryDiskPSF.
+- tag_uri: tag:astropy.org:photutils/psf/circular_gaussian_prf-1.0.0
+  schema_uri: asdf://astropy.org/photutils/schemas/psf/circular_gaussian_prf-1.0.0
+  title: CircularGaussianPRF
+  description: ASDF schema for serializing a photutils CircularGaussianPRF.
+- tag_uri: tag:astropy.org:photutils/psf/circular_gaussian_psf-1.0.0
+  schema_uri: asdf://astropy.org/photutils/schemas/psf/circular_gaussian_psf-1.0.0
+  title: CircularGaussianPSF
+  description: ASDF schema for serializing a photutils CircularGaussianPSF.
+- tag_uri: tag:astropy.org:photutils/psf/circular_gaussian_sigma_prf-1.0.0
+  schema_uri: asdf://astropy.org/photutils/schemas/psf/circular_gaussian_sigma_prf-1.0.0
+  title: CircularGaussianSigmaPRF
+  description: ASDF schema for serializing a photutils CircularGaussianSigmaPRF.
