@@ -159,6 +159,6 @@ jobs:
         python-version: '3.13'
         allow-prereleases: true
     - name: Install dependencies
-      run: python -m pip install --upgrade pip setuptools tox && python -m pip install asdf
+      run: python -m pip install --upgrade pip setuptools tox && python -m pip install asdf asdf-astropy
     - name: Validate ASDF schemas
       run: python -m photutils.converters.validate_schemas photutils/resources/schemas/psf/*.yaml
