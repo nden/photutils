@@ -162,4 +162,4 @@ jobs:
     - name: Install dependencies
       run: cd photutils && python -m pip install --upgrade pip setuptools tox && python -m pip install -e .[test]
     - name: Validate ASDF schemas
-      run: pytest photutils/resources/schemas
+      run: cd photutils && pytest photutils/resources/schemas
