@@ -159,14 +159,6 @@ jobs:
       with:
         python-version: '3.13'
         allow-prereleases: true
-    - name: Install photutils
-        run: cd asdf-astropy && pip install .[test]
-      - name: Install asdf-transform-schemas
-        run: cd asdf-transform-schemas && pip install -e .[test]
-      - name: Pip Freeze
-        run: pip freeze
-      - name: Run asdf-transform-schemas development tests
-        run: cd asdf-transform-schemas && pytest
     - name: Install dependencies
       run: cd photutils && python -m pip install --upgrade pip setuptools tox && python -m pip install -e .[test]
     - name: Validate ASDF schemas
