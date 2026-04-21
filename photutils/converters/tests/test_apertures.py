@@ -16,7 +16,8 @@ apertures = [
 ]
 
 
-@pytest.mark.skipif(not ASDF_ASTROPY_INSTALLED, reason='asdf-astropy is not installed')
+@pytest.mark.skipif(not ASDF_ASTROPY_INSTALLED,
+                    reason='asdf-astropy is not installed')
 def test_aperture_converters(tmp_path):
     """
     Test that the aperture converters can round-trip an aperture object.

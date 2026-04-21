@@ -20,7 +20,8 @@ if ASDF_ASTROPY_INSTALLED:
     ]
 
 
-@pytest.mark.skipif(not ASDF_ASTROPY_INSTALLED, reason='asdf-astropy is not installed')
+@pytest.mark.skipif(not ASDF_ASTROPY_INSTALLED,
+                    reason='asdf-astropy is not installed')
 def test_psf_converters(tmp_path):
     """
     Test that the PSF converters can round-trip a PSF object.
