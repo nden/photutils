@@ -5,17 +5,21 @@ Tests for the photutils PSF converters.
 """
 import asdf
 from astropy import units as u
+import pytest
 
-from photutils.psf import AiryDiskPSF
+from .. import ASDF_ASTROPY_INSTALLED
+if ASDF_ASTROPY_INSTALLED:
+    from photutils.psf import AiryDiskPSF
 
-psfs = [
-    AiryDiskPSF(flux=1 * u.Jy, x_0=0 * u.arcsec, y_0=0 * u.arcsec,
-                radius=1 * u.arcsec, bbox_factor=2),
-    AiryDiskPSF(flux=2 * u.Jy, x_0=1 * u.arcsec, y_0=1 * u.arcsec,
-                radius=2 * u.arcsec, bbox_factor=3),
-]
+    psfs = [
+        AiryDiskPSF(flux=1 * u.Jy, x_0=0 * u.arcsec, y_0=0 * u.arcsec,
+                    radius=1 * u.arcsec, bbox_factor=2),
+        AiryDiskPSF(flux=2 * u.Jy, x_0=1 * u.arcsec, y_0=1 * u.arcsec,
+                    radius=2 * u.arcsec, bbox_factor=3),
+    ]
 
 
+@pytest.mark.skipif(not ASDF_ASTROPY_INSTALLED, reason='asdf-astropy is not installed')
 def test_psf_converters(tmp_path):
     """
     Test that the PSF converters can round-trip a PSF object.

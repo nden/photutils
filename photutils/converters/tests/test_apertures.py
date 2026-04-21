@@ -5,7 +5,9 @@ Tests for the photutils aperture converters.
 """
 import asdf
 import numpy as np
+import pytest
 
+from .. import ASDF_ASTROPY_INSTALLED
 from photutils.aperture import CircularAperture
 
 apertures = [
@@ -14,6 +16,7 @@ apertures = [
 ]
 
 
+@pytest.mark.skipif(not ASDF_ASTROPY_INSTALLED, reason='asdf-astropy is not installed')
 def test_aperture_converters(tmp_path):
     """
     Test that the aperture converters can round-trip an aperture object.

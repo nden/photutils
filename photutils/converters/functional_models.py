@@ -4,8 +4,12 @@
 Converters to and from the ASDF format for photutils.psf.functional_models.
 """
 
-from asdf_astropy.converters.transform.core import (TransformConverterBase,
-                                                    parameter_to_value)
+from . import ASDF_ASTROPY_INSTALLED
+if ASDF_ASTROPY_INSTALLED:
+    from asdf_astropy.converters.transform.core import (TransformConverterBase,
+                                                        parameter_to_value)
+else:
+    TransformConverterBase = object
 
 __all__ = ['AiryDiskPSFConverter']
 
