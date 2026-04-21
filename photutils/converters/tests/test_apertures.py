@@ -7,8 +7,8 @@ import asdf
 import numpy as np
 import pytest
 
-from .. import ASDF_ASTROPY_INSTALLED
 from photutils.aperture import CircularAperture
+from photutils.converters import ASDF_ASTROPY_INSTALLED
 
 apertures = [
     CircularAperture(positions=[(1, 2), (3, 4)], r=5),

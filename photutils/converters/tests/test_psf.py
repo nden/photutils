@@ -4,10 +4,11 @@
 Tests for the photutils PSF converters.
 """
 import asdf
-from astropy import units as u
 import pytest
+from astropy import units as u
 
-from .. import ASDF_ASTROPY_INSTALLED
+from photutils.converters import ASDF_ASTROPY_INSTALLED
+
 if ASDF_ASTROPY_INSTALLED:
     from photutils.psf import AiryDiskPSF
 

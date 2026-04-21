@@ -3,7 +3,7 @@
 ASDF_ASTROPY_INSTALLED = True
 
 try:
-    import asdf_astropy
+    import asdf_astropy  # noqa: F401 -- needed to register the converters
     from .functional_models import AiryDiskPSFConverter
     from .apertures import CircularApertureConverter
 except ImportError:
